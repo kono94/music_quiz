@@ -239,7 +239,11 @@ io.on('connection', function(client){
 		new_artist = data.artist;
 		response.artist = new_artist;
 		song_id = data.song_id;
+<<<<<<< HEAD
 		if(new_artist.length == 0){
+=======
+		if(new_artist.length){
+>>>>>>> b60316841d2e687b198b985de1c73ab09cb9cb11
 			response.error = true;
 			response.error_message = "Your suggestion is too short or empty";
 			client.emit('add_new_artist_response', response);
@@ -256,7 +260,11 @@ io.on('connection', function(client){
 							return;
 						}else{
 							response.error = false;							
+<<<<<<< HEAD
 							client.emit('add_new_artist_response', response);
+=======
+							client.emit('update_correct_answers', response);
+>>>>>>> b60316841d2e687b198b985de1c73ab09cb9cb11
 							  for(var clientID in users){
 								io.to(clientID).emit('update_message', users[client.id].name + ' added "' + new_artist + '" to the correct artist answers');
 							  }
@@ -276,7 +284,11 @@ io.on('connection', function(client){
 		new_songname = data.songname;
 		response.songname = new_songname;
 		song_id = data.song_id;
+<<<<<<< HEAD
 		if(new_songname.length == 0){
+=======
+		if(new_songname.length){
+>>>>>>> b60316841d2e687b198b985de1c73ab09cb9cb11
 			response.error = true;
 			response.error_message = "Your suggestion is too short or empty";
 			client.emit('add_new_songname_response', response);
