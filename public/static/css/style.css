@@ -1,0 +1,244 @@
+body { 
+    background-color: #eee;
+    font-family: 'Roboto Slab', serif;
+    font-size: 17px;
+}
+#game{
+	display:none;
+	 padding-top: 20px;
+	  padding-bottom: 40px;
+    background: url(../images/background-hd.jpg) no-repeat center center fixed;
+    /* background: url(http://clipartzebra.com/images/3/background-festival/background-festival-02.jpg) no-repeat center center fixed; */
+    
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#login_body {
+	display:none;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../images/cool-neon-backgrounds.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+h2 {
+    cursor: default;
+    text-shadow: 0 0 10px black;
+    color: #eee;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 60px;
+}
+#set_username_container{
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+	width:350px;
+	margin-top:120px;
+}
+#userspan {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 19px;
+    margin-left: 8px;
+}
+#h5_player{
+	 visibility:hidden;
+}
+#submitWrap {
+    width: 539px;
+    height: 260px;
+    float: left;
+    border: 3px solid #046ca3;
+    /* border-style: inset; */
+    
+    padding: 12px;
+}
+#artist_guess {
+    margin-right: 20px;
+}
+#inputWrap {
+    text-align: center;
+    margin-top: 30px;
+}
+#song_guess {} #guess_submit {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+#topRight {
+    color: #eee;
+    text-align: right;
+    position: relative;
+    top: -20px;
+    right: 20px;
+}
+#playerWrap {
+    text-align: center;
+    margin-bottom: 35px;
+}
+.progress {
+    margin-bottom: 45px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+}
+.alert {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px;
+}
+#alertWrap {
+    height: 100px;
+    margin-top: 20px;
+}
+#wrong{
+	display:none;
+}
+#correct{
+	display:none;
+	display:none;
+}
+#midWrap {
+    width: 900px;
+    margin: 0 auto;
+    height: 260px;
+    margin-bottom: 80px;
+}
+#correct_song {	   
+    text-align: center;
+    float: right;
+    border: 3px solid #046ca3;
+    width: 300px;
+    height: 130px;
+    max-height: 250px;
+    padding: 20px;
+    border: 3px solid #046ca3;
+    /* border-style: inset; */
+}
+#correct_artist {   
+    font-weight: bold;
+    font-size: 22px;
+}
+#correct_song {
+    display: table;
+    overflow: auto;
+}
+#extraTextWrap {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#userspan {
+    cursor: pointer;
+}
+#correct_image {
+    cursor: pointer;
+    border: 1px solid #021a40;
+    height: 150px;
+    width: 150px;
+    margin-bottom: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+.bcolor {
+    background-color: #eee;
+}
+.bshadow {
+    box-shadow: 0px 0px 15px 5px;
+    border-radius: 10px;
+}
+#user_table {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 20px;
+    box-shadow: 0px 0px 5px 3px #eee;
+}
+#wannabegif {
+    cursor: pointer;
+    margin-right: 40px;
+    border: 1px solid black;
+    width: 250px;
+    box-shadow: 0px 0px 20px 2px;
+    display: inline-block;
+    border-radius: 5px;
+}
+.progress {
+    box-shadow: 0px 0px 8px 1px #286090;
+}
+.progress-bar {
+    float: left;
+}
+#timeLeftText {
+    line-height: 20px;
+    font-size: 12px;
+    text-align: center;
+}
+.msgAfterSubmit,
+.allUnchecked {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+}
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+.ui-state-default {
+    border-radius: 80%;
+    top: -5px;
+}
+#volumeBar {
+    display: inline-block;
+    height: 10px;
+    width: 300px;
+}
+#muteButton {
+    display: inline-block;
+    margin-right: 20px;
+}
+#wrongFormatMessage {
+    margin-right: auto;
+    margin-left: auto;
+    width: 500px;
+    text-align: center;
+    margin-top:4;
+    margin-top: 40px;
+    color: red;
+}
+#correctTextWrap{
+	cursor:pointer;
+}
+#event_log{
+	overflow:auto;
+	width: 80%;
+	height: 111px; 
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+    padding: 10px;   
+    box-shadow: 0px 0px 5px 3px #eee;
+	margin-bottom:30px;
+}
+#event_list > li:nth-child(odd){
+	background-color: coral;
+}
+#event_list > li:nth-child(even){
+	background-color: aquamarine;
+}
