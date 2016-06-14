@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Dank Music Quiz</title>		
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">	
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<link rel="shortcut icon" type="image/x-icon" href="images/favi.ico" />
+	<!-- Latest compiled and minified CSS -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+
+	<link rel="stylesheet" href="js/messi.min.css" />
+	<script src="js/messi.min.js"></script>	
+	<link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>		
+	<script>
+		var socket = io();
+		var time_left = 30;
+		var unmute_volume = 0;
+	     var muted = false;	
+	    var volume;
+	    var lastSongID = 0;
+		var currentSongID = 0;
+		var  save_song_id = 0;
+		var temp_song_id = 0;
+	   </script>
+	<script src="/js/client.js"></script>
+</head>	
+
+	<body>
+	<div id="game">
+		<div id="topRight">Currently playing as: <span id="userspan" onclick="change_username_messi()"></span></div>
+		<h2>Dank Music Quiz</h2>
+		
+		<audio id="h5_player" controls>
+			<source id="music_source" src="" type="audio/mp3">
+		</audio>
+		
+				
+		<div class="progress"  onselectstart="return false">
+			<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"></div>
+			<div id="timeLeftText"></div>
+		</div>
+		<div id="playerWrap" onselectstart="return false">	  
+			<img id="wannabegif" src="images/player_gif.gif" > 	
+			<button type="button" id="muteButton" class = "btn btn-lg" onclick="mute()">
+				<span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span>
+			</button>
+			<div id="volumeBar"></div>
+		</div>
+
+
+		<div id="midWrap">
+			<div id="submitWrap" class="bcolor bshadow">	
+				<div id="inputWrap">
+					<input type="text" id="artist_guess" placeholder="artist" >
+					<input type ="text" id="song_guess" placeholder="Song name">
+				</div>
+				<input type ="button" id="guess_submit"  class="btn btn-lg btn-primary" value="submit" onclick="submit();"> 	
+				
+				<div id="alertWrap"  onselectstart="return false">
+					<div id="wrong"  class="alert alert-danger" role="alert"><strong>Nope!</strong> Try your luck again</div>
+					<div id="correct" class="alert alert-success" role="alert"><strong>Well done!</strong> You got something right.</div>				
+				</div>	
+			</div>
+			<div id="correct_song" class="bcolor bshadow">		
+					<div id="extraTextWrap" >	
+					<img id="correct_image" src="images/loading.gif" title="Report this song"></img>	
+					<div id="correctTextWrap">
+						<span id="correct_artist" >There is no last song</span><br>
+						<span id="correct_song_name">Please wait</span>		
+					</div>					
+				</div>
+			</div>
+		</div>	
+	  <div id="event_log" class="bcolor">	
+		<ul id="event_list"></ul>
+	  </div>
+		<div id="user_table" class="bcolor">
+			<table id ="uTable" class="table"><thead><tr><th>#</h><th>username</th><th>points</th></tr></thead><tbody></tbody>
+			</table>
+		</div>
+	</div>	
+	
+	<div id="error_message"></div>
+	<div id="login_body" class="bground">
+		
+		<div id="set_username_container">
+			<input type="text"  class="form-control" placeholder ="username" id="username" style="margin-bottom:20px;">
+			<input id="submit_username" class ="btn btn-lg btn-primary btn-block" type="button" value="Play" onclick="set_username()">
+		</div>
+		<div id="wrongFormatMessage"></div>
+		<script>
+		$('#username').bind("enterKey",function(e){		
+			set_username();
+		});
+		$('#username').keyup(function(e){
+			if(e.keyCode == 13)
+			{
+				$(this).trigger("enterKey");
+			}
+		});
+		
+				
+		
+		</script>
+					
+	</body>
+</html>
