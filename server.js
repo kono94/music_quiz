@@ -433,7 +433,7 @@ function sentCurrentPreview(clientID){
 }
 function loadNewSong(){		
  console.log("in loadNewSong");	
-		con.query('SELECT id,  preview, song_name_short, artist, artist_image FROM ?? WHERE playbackProblem == 0 ORDER BY RAND() LIMIT 1', ['mq_songs'], function(err, result) {
+		con.query('SELECT id,  preview, song_name_short, artist, artist_image FROM ?? WHERE playbackProblem LIKE 0 ORDER BY RAND() LIMIT 1', ['mq_songs'], function(err, result) {
 			if (err) throw err;				 
 
 			lastSongPreview = currentSongPreview;
