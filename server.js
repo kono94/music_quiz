@@ -26,7 +26,7 @@ var con = mysql.createConnection({
   host: configDB.host, 
   user: configDB.user,
   password: configDB.password,
-   database: configDB.database
+    database: configDB.database
   
 });
 con.connect(function(err){
