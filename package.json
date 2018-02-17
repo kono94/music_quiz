@@ -1,10 +1,10 @@
-﻿i{
+﻿{
   "name": "music_quiz",
   "main": "server.js",
   "dependencies" : {
     "express" : "latest",  
     "socket.io" : "latest",	
-    "ejs" : "latest",            
+    "ejs" : "latest",   
     "express-session": "latest",
 	"fast-levenshtein": "latest",
 	"cron" : "latest"

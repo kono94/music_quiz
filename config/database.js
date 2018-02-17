@@ -2,7 +2,7 @@
 module.exports = {
 
   host: "localhost", 
-  user: "",
-  password: "",
+  user: "music",
+  password: "music123",
   database: "MUSIC_QUIZ"
 };
