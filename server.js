@@ -5,9 +5,7 @@
 var express  = require('express');
 var app      = express();
 var port     = process.env.PORT || 3000;
-var flash    = require('connect-flash');
 var mysql    = require("mysql");
-var passport = require('passport');
 var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 var ejs = require('ejs');
@@ -15,10 +13,6 @@ var _ = require('underscore')._;
 var levenshtein = require('fast-levenshtein');
 var CronJob = require('cron').CronJob;
 
-var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
-var session      = require('express-session');
-var morgan       = require('morgan');
 var configDB = require('./config/database.js');
 
 // First you need to create a connection to the db
@@ -26,7 +20,7 @@ var con = mysql.createConnection({
   host: configDB.host, 
   user: configDB.user,
   password: configDB.password,
-    database: configDB.database
+  database: configDB.database
   
 });
 con.connect(function(err){
