@@ -1,6 +1,3 @@
 node_modules/
-config/
-<<<<<<< HEAD
-=======
-config/database.js
->>>>>>> 722f2beba1b82b4a3001fc7b2cc99b4324b149f3
+config/c
+onfig/database.js
